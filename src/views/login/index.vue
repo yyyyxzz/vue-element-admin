@@ -1,5 +1,5 @@
 <template>
-  <div class="login-container">
+  <div class="login-container"  :style="{backgroundImage: 'url(' + bg + ')' }">
     <el-form
       ref="loginForm"
       :model="loginForm"
@@ -9,7 +9,7 @@
       label-position="left"
     >
       <div class="title-container">
-        <h3 class="title">数据管理平台</h3>
+        <h3 class="title">调度数据总线</h3>
       </div>
 
       <el-form-item prop="username">
@@ -67,6 +67,7 @@
 
 <script>
 import { validUsername } from "@/utils/validate";
+import bg from './bg.jpeg'
 
 export default {
   name: "Login",
@@ -86,6 +87,7 @@ export default {
       }
     };
     return {
+      bg:bg,
       loginForm: {
         username: "admin",
         password: "111111"
@@ -204,7 +206,7 @@ $light_gray: #eee;
   width: 100%;
   // background-color: $bg;
   overflow: hidden;
-  background-image: url("https://images.unsplash.com/photo-1573480813647-552e9b7b5394?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2253&q=80");
+  // background-image: url("https://images.unsplash.com/photo-1573480813647-552e9b7b5394?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2253&q=80");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;

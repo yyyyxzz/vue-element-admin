@@ -20,12 +20,12 @@
 
       <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
         <div class="avatar-wrapper">
-          <el-avatar icon="el-icon-user-solid" style="margin-right:10px;" size="small"></el-avatar>
+          <el-avatar icon="el-icon-user-solid" style="margin-right:10px;color:#67B9F9" size="small"></el-avatar>
           <span>{{name}}</span>
         </div>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item  @click.native="logout">
-            <span style="display:block;">Log Out</span>
+            <span style="display:block;">退出登录</span>
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
@@ -70,6 +70,14 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+.navbar{
+  .el-avatar{
+    background-color: lightblue !important;
+  }
+
+}
+</style>
 
 <style lang="scss" scoped>
 .navbar {
